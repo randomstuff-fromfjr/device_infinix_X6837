@@ -62,6 +62,9 @@ function blob_fixup() {
         vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc)
             sed -i 's/@1.2-mediatek/@1.2-mediatek-64b/g' "${2}"
             ;;
+        vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
+            "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
+            ;;
     esac
 }
 
