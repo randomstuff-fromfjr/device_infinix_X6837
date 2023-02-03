@@ -63,6 +63,10 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     libhidltransport
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.X6837
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
