@@ -128,8 +128,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6789
+TARGET_BOARD_PLATFORM := mt6789 
 BOARD_HAS_MTK_HARDWARE := true
+BOARD_HAVE_MTK_FM := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture_function"
