@@ -1,5 +1,9 @@
 ## x6837 package version: X6837-H897ABCDEFQRZAaAb-T-BASE-240313V1154, unless stated otherwise
 
+# AEE
+vendor/lib/libaedv.so
+vendor/lib64/libaedv.so
+
 # Audio
 vendor/lib/hw/audio.primary.mediatek.so
 vendor/lib/hw/audio.r_submix.mediatek.so
