@@ -4,6 +4,7 @@ import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.aee.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.cgroup.rc
+import /vendor/etc/init/hw/init.transsion.rc
 import /vendor/etc/init/hw/init.modem.rc
 
 # Keep debugfs mounted in non-user builds
