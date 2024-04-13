@@ -61,5 +61,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Include GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6837/X6837-vendor.mk)
