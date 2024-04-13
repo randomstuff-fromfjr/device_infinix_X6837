@@ -58,11 +58,24 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl.recovery \
     android.hardware.boot@1.2-service
     bootctrl.default 
+
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
+# Dex
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
     
 # FastbootD
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
+
+# Fingerprint (Permissions)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -80,6 +93,22 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag \
     SecureElement
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6789 \
+    init.aee.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6789.rc \
+    init.mt6789.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    init_connectivity.rc \
+    multi_init.rc 
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
