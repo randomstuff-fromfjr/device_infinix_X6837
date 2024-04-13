@@ -70,35 +70,6 @@ ro.mtk_key_manager_support
 persist.service.adb.enable=1                                                    
 persist.service.debuggable=1
 
-# Disable MTE Async for system server
-arm64.memtag.process.system_server=off
-
-# Log
-persist.log.tag.BufferQueueDump
-persist.log.tag.gralloc4=S
-persist.log.tag.BufferQueueProducer=I
-persist.log.tag.Telecom=I
-persist.log.tag.bt_stack=S
-persist.log.tag.CamX=S
-persist.log.tag.CHIUSECASE=S
-persist.log.tag.cnss-daemon=S
-persist.log.tag.CVP=S
-persist.log.tag.DeviceStatisticsService=S
-persist.log.tag.DrmLibTime=S
-persist.log.tag.FastChargingPreferenceController=S
-persist.log.tag.QC-time-services=S
-persist.log.tag.ResourcesCompat=S
-persist.log.tag.SYNX-UMD=S
-persist.log.tag.ultrasound_extn=S
-
-# Adaptive Suspend
-suspend.short_suspend_threshold_millis=2000
-suspend.short_suspend_backoff_enabled=true
-suspend.max_sleep_time_millis=40000
-
-# Brightness gamma
-persist.sys.brightness.low.gamma=true
-
 # WiFi
 wifi.interface=wlan0
 ro.mediatek.wlan.wsc=1
