@@ -63,6 +63,13 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     libhidltransport
 
+# NFC
+PRODUCT_PACKAGES += \
+    NfcNci \
+    com.android.nfc_extras \
+    Tag \
+    SecureElement
+    
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
