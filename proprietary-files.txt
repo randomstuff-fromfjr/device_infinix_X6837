@@ -1641,7 +1641,6 @@ vendor/data/camera/model/sky_sunshine.jpg
 vendor/data/camera/model/Transsion_Segment_Pre.mnn
 vendor/data/camera/morpho/morpho_calibration_video.bin
 vendor/data/camera/vidhance/vidhance_calibration
-vendor/data/camera/vidhance/vidhance.lic
 vendor/data/camera/watermark/watermark_1280x720.nv21
 vendor/data/camera/watermark/watermark_1280x720.yuyv
 vendor/data/camera/watermark/watermark_1920x1080.nv21
