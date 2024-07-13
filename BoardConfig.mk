@@ -137,6 +137,7 @@ TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(DEVICE_PATH):libperfmgr-ext-tr
 
 # Properties
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/system.prop
+TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/product.prop
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/vendor.prop
 
 # Recovery
