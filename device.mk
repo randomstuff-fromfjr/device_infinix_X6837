@@ -56,17 +56,20 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    audio.primary.default \
     audio.r_submix.default \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
+    libaudioroute.vendor \
     libaudiofoundation.vendor \
     libbluetooth_audio_session \
     libalsautils \
     libnbaio_mono \
     libtinycompress \
     libdynproc \
-    libhapticgenerator
+    libhapticgenerator \
+    libprocessgroup.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -93,6 +96,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     libexpat.vendor \
+    libexif.vendor \
+    libpiex \
     libpng.vendor
 
 # Cgroup
@@ -153,7 +158,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
-    libcurl.vendor
+    libcurl.vendor 
 
 # Health
 PRODUCT_PACKAGES += \
@@ -320,6 +325,12 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio@1.6.vendor
+
+# Required for QPR3
+PRODUCT_PACKAGES += \
+    libjsoncpp.vendor \
+    libsqlite.vendor \
+    libdumpstateutil.vendor
 
 # Secure Element
 PRODUCT_PACKAGES += \
