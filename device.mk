@@ -281,7 +281,8 @@ PRODUCT_PACKAGES += \
     SettingsResTarget \
     SettingsProviderResTarget \
     SystemUIResTarget \
-    TelephonyResTarget
+    TelephonyResTarget \
+    WifiResTarget
 
 # Permissions
 PRODUCT_COPY_FILES += \
