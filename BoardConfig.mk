@@ -133,7 +133,7 @@ BOARD_HAS_MTK_HARDWARE := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := /proc/gesture_function
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(DEVICE_PATH):libperfmgr-ext-transsion
 
 # Properties
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/system.prop
