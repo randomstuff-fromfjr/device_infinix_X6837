@@ -1,5 +1,20 @@
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
+# Surfaceflinger
+debug.sf.auto_latch_unsignaled=false
+debug.sf.early.app.duration=20000000
+debug.sf.early.sf.duration=27600000
+debug.sf.earlyGl.app.duration=20000000
+debug.sf.earlyGl.sf.duration=27600000
+debug.sf.enable_gl_backpressure=0
+debug.sf.enable_transaction_tracing=false
+debug.sf.hwc.min.duration=23000000
+debug.sf.latch_unsignaled=true
+debug.sf.late.app.duration=20000000
+debug.sf.late.sf.duration=27600000
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.use_phase_offsets_as_durations=1
+
 # Zygote
 zygote.critical_window.minute=10
