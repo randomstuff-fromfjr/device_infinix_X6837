@@ -1,3 +1,12 @@
+# AEE
+ro.vendor.have_aee_feature=1
+
+# Audio
+audio.offload.disable=true
+vendor.af.dynamic.sleeptime.enable=true
+vendor.af.pausewait.enable=false
+vendor.af.threshold.src_and_effect_count=5
+
 # Bluetooth
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.asha.central.enabled=true
@@ -14,8 +23,35 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+# Camera
+vendor.camera.tran.nums=1
+
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Media
+debug.stagefright.c2inputsurface=-1
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.vendor.mtk_flv_playback_support=1
+
+# Misc
+Build.BRAND=MTK
+ro.transsion.tranfs.path=/tranfs
+
+# Perf
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.mtk_perf_simple_start_win=1
+
+# Radio
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
+ro.vendor.mtk_telephony_add_on_policy=0
 
 # Surfaceflinger
 debug.sf.auto_latch_unsignaled=false
@@ -34,6 +70,14 @@ debug.sf.use_phase_offsets_as_durations=1
 
 # TNE
 ro.transsion.tne.support=true
+
+# WiFi
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
 
 # Zygote
 zygote.critical_window.minute=10
