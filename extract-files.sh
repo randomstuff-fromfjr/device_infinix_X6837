@@ -91,6 +91,11 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             grep -q libshim_camera_metadata.so "${2}" || "${PATCHELF}" --add-needed libshim_camera_metadata.so "${2}"
             ;;
+        vendor/bin/hw/mt6789/camerahalserver)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
     esac
 }
 
