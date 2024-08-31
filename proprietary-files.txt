@@ -1892,6 +1892,17 @@ vendor/lib64/libperfctl_vendor.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
+# Pnpmgr 
+vendor/etc/init/init.pnpmgr.fpsgo.boost.gki.rc
+vendor/etc/init/init.pnpmgr_game_mode.gki.rc
+vendor/etc/init/init.pnpmgr.fre.gki.rc
+vendor/etc/init/init.pnpmgr_game_record.gki.rc
+vendor/etc/init/init.pnpmgr.gki.rc
+vendor/etc/pnpmgr.db
+vendor/lib64/libpnpmgr.so
+vendor/lib/libpnpmgr.so
+vendor/bin/pnpmgr
+
 # Radio
 vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
