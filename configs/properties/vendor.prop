@@ -1,6 +1,14 @@
+# AAL
+ro.vendor.mtk_aal_support=1
+
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+persist.vendor.rm.debug.headsetmic=1
+persist.vendor.rm.debug.phonemic=1
+ro.vendor.mtk_audio_alac_support=1
+ro.vendor.mtk_audio_ape_support=1
+ro.vendor.mtk_hifiaudio_support=1
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac
