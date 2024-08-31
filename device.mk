@@ -349,7 +349,11 @@ PRODUCT_PACKAGES += \
 
 # Required for QPR3
 PRODUCT_PACKAGES += \
+    liblz4.vendor \
+    libmemunreachable.vendor \
+    libhidlbase_shim \
     libjsoncpp.vendor \
+    libziparchive.vendor \
     libsqlite.vendor \
     libdumpstateutil.vendor
 
