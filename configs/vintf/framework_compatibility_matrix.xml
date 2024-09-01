@@ -166,6 +166,34 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.lbs</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILbs</name>
+            <instance>mtk_lppe_socket_agps</instance>
+            <instance>mtk_lppe_socket_wlan</instance>
+            <instance>mtk_lppe_socket_bt</instance>
+            <instance>mtk_lppe_socket_sensor</instance>
+            <instance>mtk_lppe_socket_network</instance>
+            <instance>mtk_lppe_socket_ipaddr</instance>
+            <instance>mtk_lppe_socket_lbs</instance>
+            <instance>mtk_framework2agps</instance>
+            <instance>mtk_agps2framework</instance>
+            <instance>mtk_mnld2nlputils</instance>
+            <instance>AgpsInterface</instance>
+            <instance>AgpsDebugInterface</instance>
+            <instance>mtk_meta2mnld</instance>
+            <instance>mtk_debugService2mnld</instance>
+            <instance>mtk_mnld2debugService</instance>
+            <instance>mtk_mnld2mtklogger</instance>
+            <instance>mtk_mtklogger2mnld</instance>
+            <instance>mtk_lbs_log_v2s</instance>
+            <instance>mtk_debugService2agpsd</instance>
+            <instance>mtk_agpsd2debugService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.log</name>
         <version>1.0</version>
         <interface>
@@ -271,6 +299,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.tranHwInfo</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITranHwInfo</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.videotelephony</name>
         <version>1.0</version>
         <interface>
@@ -295,10 +332,37 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.security.hap</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IHap</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.trandatacenter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITranDataCenter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.transsion.hardware.hyperion.hap</name>
         <version>1.0</version>
         <interface>
             <name>IHap</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.performance.sched</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITransSched</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -323,6 +387,15 @@
         <version>1.0</version>
         <interface>
             <name>ITranLogConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.tne.tneengine</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITne</name>
             <instance>default</instance>
         </interface>
     </hal>
