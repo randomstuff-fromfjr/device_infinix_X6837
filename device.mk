@@ -61,6 +61,9 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
+    audio_policy.stub \
+    libopus.vendor \
+    audioclient-types-aidl-cpp.vendor \
     libaudioroute.vendor \
     libaudiofoundation.vendor \
     libbluetooth_audio_session \
