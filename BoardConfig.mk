@@ -189,7 +189,7 @@ BOARD_VNDK_VERSION := current
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-	$(CONFIGS_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+	$(CONFIGS_PATH)/vintf/framework_compatibility_matrix.xml \
 	vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
