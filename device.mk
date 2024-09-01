@@ -71,6 +71,9 @@ PRODUCT_PACKAGES += \
     libhapticgenerator \
     libprocessgroup.vendor
 
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -207,7 +210,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
-    
+
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
