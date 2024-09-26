@@ -29,6 +29,12 @@ vendor.camera.tran.nums=1
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
+# Disable blur on app launch
+ro.launcher.blur.appLaunch=1
+
+# Fuse passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -42,6 +48,11 @@ ro.vendor.mtk_flv_playback_support=1
 # Misc
 Build.BRAND=MTK
 ro.transsion.tranfs.path=/tranfs
+
+# Memory Optimization
+ro.config.per_app_memcg=false
+ro.config.dha_cached_min=16
+ro.config.dha_cached_max=32
 
 # Perf
 ro.mtk_perf_fast_start_win=1
@@ -78,6 +89,11 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
 
 # Zygote
 zygote.critical_window.minute=10
