@@ -8,8 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Everest stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+EVEREST_MAINTAINER := "gabutuniverse!"
+TARGET_SUPPORTS_BLUR := true
+TARGET_HAS_UDFPS := false
+EXTRA_UDFPS_ANIMATIONS := false
+WITH_GAPPS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 # Inherit from X6837 device
 $(call inherit-product, device/infinix/X6837/device.mk)
@@ -28,6 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=X6837-OP
 
 BUILD_FINGERPRINT := Infinix/X6837-OP/Infinix-X6837:13/TP1A.220624.014/240313V1154:user/release-keys
-
-# Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
