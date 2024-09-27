@@ -13,6 +13,7 @@ $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit from X6837 device
 $(call inherit-product, device/infinix/X6837/device.mk)
+TARGET_BUILD_GAPPS := true
 
 BOARD_VENDOR := Infinix
 PRODUCT_NAME := yaap_X6837
