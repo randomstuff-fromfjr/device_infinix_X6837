@@ -2,6 +2,9 @@
 ro.vendor.have_aee_feature=1
 
 # Audio
+ro.audio.silent=0
+ro.audio.usb.period_us=16000
+persist.vendor.anr.dumpthr=1
 audio.offload.disable=true
 vendor.af.dynamic.sleeptime.enable=true
 vendor.af.pausewait.enable=false
@@ -23,8 +26,18 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+# Blur
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # Camera
+ro.camera.sound.forced=0
 vendor.camera.tran.nums=1
+persist.vendor.camera.privapp.list=org.lineageos.aperture,com.android.camera
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
+
+# Cached app compaction
+persist.device_config.activity_manager.use_compaction=true
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -32,13 +45,33 @@ dalvik.vm.dex2oat64.enabled=true
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=1
 
+# Display / Fingerprint
+ro.hardware.fp.sideCap=true
+
 # Fuse passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Graphics
+debug.sf.enable_transaction_tracing=false
+debug.sf.predict_hwc_composition_strategy=0
 
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# Iorapd
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
+# IPO
+sys.ipo.pwrdncap=2
+sys.ipo.disable=1
+
+# Kernel
+ro.kernel.zio=38,108,105,16
 
 # Media
 debug.stagefright.c2inputsurface=-1
@@ -65,7 +98,7 @@ vendor.rild.libpath=mtk-ril.so
 ro.vendor.mtk_telephony_add_on_policy=0
 
 # Surfaceflinger
-debug.sf.auto_latch_unsignaled=false
+debug.sf.auto_latch_unsignaled=0
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
@@ -78,6 +111,17 @@ debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.use_phase_offsets_as_durations=1
+
+# SLA
+ro.vendor.net.enable_sla=1
+
+# Thermal Management
+ro.mtk_thermal_monitor.enabled=true
+persist.thermal_config.mitigation=1
+
+# Thermal Configuration
+ro.config.thermal_limit=75
+ro.config.thermal_dcs=40
 
 # TNE
 ro.transsion.tne.support=true
