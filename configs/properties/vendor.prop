@@ -9,6 +9,9 @@ persist.vendor.rm.debug.phonemic=1
 ro.vendor.mtk_audio_alac_support=1
 ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_hifiaudio_support=1
+persist.vendor.audiohal.aurisys.pcm_dump_on=0
+persist.vendor.audiohal.p2w_dump_on=0
+persist.vendor.audiohal.pcm_mixer_dump_on=0
 
 # Bluetooth
 bluetooth.profile.sap.server.enabled=true
