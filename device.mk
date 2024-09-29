@@ -129,8 +129,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0.vendor \
     libion.vendor \
     libui.vendor \
-    libhwc2on1adapter \
-    libhwc2onfbadapter.vendor \
     libdrm.vendor 
 
 # DRM
