@@ -151,6 +151,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# SEPolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := X6837,Infinix-X6837
 
