@@ -129,10 +129,10 @@ on post-fs-data
     # Disable watermark boost
     write /proc/sys/vm/watermark_boost_factor 0
 
-    # zram
+    # Setup ZRAM
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 60
+    write /proc/sys/vm/swappiness 100
     write /sys/kernel/mm/swap/vma_ra_enabled false
     swapon_all /vendor/etc/fstab.mt6789
 
@@ -172,37 +172,37 @@ on post-fs-data
     mkdir /data/vendor/audiohal 0771 system audio
     mkdir /data/vendor/audiohal/audio_param 0771 system audio
 
-    #Create cct mount point
+    # Create cct mount point
     mkdir /mnt/vendor/cct
     chown root system /mnt/vendor/cct
     chmod 0771 /mnt/vendor/cct
 
-    #Create flash folder
+    # Create flash folder
     mkdir /data/vendor/flash
     chown root system /data/vendor/flash
     chmod 0771 /data/vendor/flash
 
-    #Create shading mount point
+    # Create shading mount point
     mkdir /data/vendor/shading
     chown root system /data/vendor/shading
     chmod 0771 /data/vendor/shading
 
-    #Create shading_otp mount point
+    # Create shading_otp mount point
     mkdir /data/vendor/shading_otp
     chown root system /data/vendor/shading_otp
     chmod 0771 /data/vendor/shading_otp
 
-    #Create NDD mount point
+    # Create NDD mount point
     mkdir /data/vendor/camera_dump
     chown root system /data/vendor/camera_dump
     chmod 0771 /data/vendor/camera_dump
 
-    #Create Camera Dip Debug Folder
+    # Create Camera Dip Debug Folder
     mkdir /data/vendor/dipdebug
     chown root system /data/vendor/dipdebug
     chmod 0771 /data/vendor/dipdebug
 
-    #Create flicker mount point
+    # Create flicker mount point
     mkdir /data/vendor/flicker
     chown root system /data/vendor/flicker
     chmod 0771 /data/vendor/flicker
@@ -220,10 +220,10 @@ on post-fs-data
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /mnt/vendor/nvdata
 
-    #give system access to rfkill device node
+    # Give system access to rfkill device node
     chmod 0660 /dev/rfkill
 
-    # create for muxd pts device node , to operate without root
+    # Create for muxd pts device node , to operate without root
     mkdir /dev/radio 0770 radio radio
 
     chmod 0660 /dev/spm
@@ -278,11 +278,11 @@ on post-fs-data
     chmod 0640 /dev/mml_pq
     chown system system /dev/mml_pq
 
-    #OPEN DSP
+    # Open DSP
     chmod 0640 /dev/audio_ipi
     chown media media /dev/audio_ipi
 
-    #SmartPA
+    # SmartPA
     chmod 0640 /dev/audio_scp
     chown media media /dev/audio_scp
     chown audioserver audio /sys/bus/platform/devices/rt5509_param.0/prop_param
@@ -299,7 +299,7 @@ on post-fs-data
     chmod 0666 /sys/devices/platform/soc/14013000.dsi/lcm_hbm_state
     #qing.li ck7n p1 bring up end
 
-    #v4l2 codec
+    # V4L2 codec
     chmod 0660 /dev/vcu
     chown media system /dev/vcu
     chmod 0666 /dev/video0
@@ -310,16 +310,18 @@ on post-fs-data
     mkdir /data/vendor/vcodec/log 0770 media system
     mkdir /data/vendor/vcodec/in 0770 media system
     mkdir /data/vendor/vcodec/out 0770 media system
+    
+    # KPD
     chown radio radio /sys/devices/platform/mtk-kpd/driver/kpd_call_state
 
-    #Charging Battery
+    # Charging Battery
     chown radio radio /sys/devices/platform/battery/Charging_CallState
 
     # PMIC property
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_stop
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_ut
 
-    #MDDB
+    # MDDB
     mkdir /data/vendor_de/meta 0770 system system
     mkdir /data/vendor_de/meta/mddb 0770 system system
 
@@ -383,7 +385,7 @@ on post-fs-data
     chmod 0660 /dev/sw_sync
     chown system graphics /dev/sw_sync
 
-    #pmu
+    # PMU
     chown root radio /sys/devices/platform/mt-pmic/pmic_access_bank0
     chown root radio /sys/devices/platform/mt-pmic/pmic_access_bank1
     chown root radio /sys/devices/platform/mt6311-user/mt6311_access
@@ -411,15 +413,20 @@ on post-fs-data
     chmod 0440 /dev/devmap
     chown root system /dev/devmap
 
-    # bluetooth
+   # bluetooth
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
+    # Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
     # UIBC
     chown system media /dev/uibc
     chmod 0660 /dev/uibc
+
+    # TV-out
     chmod 0664 /dev/TV-out
+
+    # HDMI
     chown media system /dev/hdmitx
     chmod 0664 /dev/hdmitx
 
@@ -432,6 +439,7 @@ on post-fs-data
     # DISP
     chmod 0444 /dev/mtk_disp
 
+    # ANC SERVICE
     chmod 0640 /dev/ancservice
     chown media media /dev/ancservice
 
@@ -528,15 +536,15 @@ on post-fs-data
     chown system camera /sys/kernel/debug/mtk_cam_dbg/1/ctrl
     chown system camera /sys/kernel/debug/mtk_cam_dbg/2/ctrl
 
-    #CCU
+    # CCU
     chmod 0660 /dev/ccu
     chown system camera /dev/ccu
 
-    #VOW
+    # VOW
     chmod 0640 /dev/vow
     chown media media /dev/vow
 
-    #MATV
+    # MATV
     chmod 0660 /dev/MATV
     chown system media /dev/MATV
 
@@ -566,7 +574,6 @@ on post-fs-data
 
 
    #change partition permission
-
     chmod 0640 /mtd@sec_ro
     chown root system /mtd@sec_ro
 
@@ -591,36 +598,37 @@ on post-fs-data
     chmod 0660 /mtd@misc
     chown root system /mtd@misc
 
+    # BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
     chmod 0660 /dev/ebc
     chown media media /dev/ebc
 
-    #usip
+    # Usip
     chmod 0660 /dev/usip
     chown media media /dev/usip
 
     chmod 0666 /dev/uio0
 
-    #otp
+    # Otp
     chmod 0660 /proc/driver/otp
     chown root system /proc/driver/otp
 
-    # secure memory
+    # Secure memory
     chown system system /proc/secmem0
 
+    # EXM
     chmod 0666 /dev/exm0
 
-
-	#Thermal
+    # Thermal
 	mkdir /data/vendor/.tp/ 0775 system system
 	mkdir /data/vendor/thermal/ 0775 system system
 
-    #MCUPM log
+    # MCUPM log
     chmod 0620 /sys/class/misc/mcupm/mcupm_mobile_log
     chown root system /sys/class/misc/mcupm/mcupm_mobile_log
     chmod 0440 /dev/mcupm
     chown root system /dev/mcupm
 
-    #EM of MT6360
+    # EM of MT6360
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/data
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/data
@@ -630,7 +638,7 @@ on post-fs-data
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
 
-	#widevine driver node
+	# Widevine driver node
 	chmod 0660 /dev/drm_wv
 	chown media system /dev/drm_wv
 
@@ -703,7 +711,8 @@ on boot
     chmod 0666 /sys/devices/virtual/torch/torch/torch_level
     chmod 0666 /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
 #ITD:add flashlight by isp team 20220412 end
-    # gauge symbolic
+
+    # Gauge symbolic
     symlink /sys/devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-gauge /dev/gauge
 
     # Permission for hibernation
@@ -746,7 +755,7 @@ on boot
     chown system system /sys/power/dcm_state
     chmod 0660 /sys/power/dcm_state
 
-##Netlog tool
+   #Netlog tool
    #change permissions about terminal
     chown root radio /proc/net/vlan/config
     chmod 0640 /proc/net/vlan/config
@@ -770,16 +779,17 @@ on boot
     chown shell system /proc/driver/wmt_dbg
     chown shell system /proc/driver/wmt_aee
 
-# define device for EMCSMDLOGGER
+    # Define device for EMCSMDLOGGER
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
 
-#Define device for ATCID
+    # Define device for ATCID
     chmod 660 /dev/ttyGS0
     chown system radio /dev/ttyGS0
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
-#Power Manager
+    
+    # Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
 # end boot time fs tune
